@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pir"
+    tools:context="com.example.noteaktivitasardiansyah.MainActivity">
+//pada kode tersebut merupakan sebuah kode program yang mana memberikan sebuah alat untuk mendesain suatu halaman dengan menambahkan halaman
+//tersebut memiliki sebuah bagroudlayout dan juga posisinya.
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20.00dp"
+        android:layout_marginTop="40.00dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ColorWhite" />
+//kode program ini memberikan sebuah desain yang menarik terdapat sebuat koneksi dan juga ukuran pada sebuah image view agar bisa terhubung.
+    <ImageView
+        android:id="@+id/imgDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_tick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ColorWhite" />
+    //pada kode program image view ini memberikan suatu layout halaman dengan menambahkan ukurang
+    dan juga tombol atau botton.
+
+    //pada program diatas memiliki sebuah fungsi untuk mengedit sebuah halaman tersebut dan
+    menyimpannya kedalam lokal penyimpnannya, dan juga memberikan suatu tampilan,
+    //dengan menambhakan bentuk dan ukuran tulisan, warna pada desain dan koneksi pada setiap
+    bottonyaa.
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:fontFamily="@font/manrope_bold"
+        android:hint="Aktivitas hari ini"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/ColorWhite"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_19ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBack" />
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/manrope_bold"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColor="@color/ColorGray"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNoteTitle" />
+//pada kode program textview ini dijelaskan bahwa memberikan ukuran pada setiap desain marginnya dengan ukuran yang baik agar bisa terkoneksi antar halaman,
+//dan memberikan perintah pada sebuah warna tulisan dan ukuran dan kemudian memberikan sebuah akses antar halaman activitynya.
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDateTime">
+//pada linearlayout ini memiliki sebuah desain dengan bentuk horizontal dan ukuran baground layoutnya.
+
+        <View
+            android:id="@+id/colorView"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@color/ColorBlue" />
+//pada kode program view ini memberikan sebuah warna baground dengan warna biru dan juga ukuran dari setiap layoutnya yang mana memiliki fungsi juga sebagai akses.
+        <EditText
+            android:id="@+id/etNoteSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/manrope_regular"
+            android:hint="Tambahkan aktivitas"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/ColorWhite"
+            android:textColorHint="@color/ColorGray"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+//pada sebuah kode program ini memiliki sebuah input data yang mana untuk menambahkan suatu aktifitas catatan dengan memberikannya warna putih pada edit text tersebut.
+    <RelativeLayout
+        android:id="@+id/layoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/l1">
+
+//pada relativ layout ini memberikan suatu akses untuk menambahkan gambar.
+
+        <ImageView
+            android:id="@+id/imgNote"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_delete" />
+//pada image view ini merupakan kode program yang mana hasilnya akan menampilkan suatu program dengan warna dan juga ukuran layout yang telah ditentukan
+//yang mana juga akan bisa terkoneksi untuk memberikan sebuah akses kedalam relativlayout.
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutWebUrl"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutImage"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/etWebLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/manrope_regular"
+            android:hint="@string/web_url"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/_10sdp"
+            android:text="http://"
+            android:textColor="@color/ColorWhite"
+            android:textColorHint="@color/ColorGray"
+            android:textSize="@dimen/_12ssp" />
+        <ImageView
+            android:id="@+id/imgUrlDelete"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:visibility="gone"
+            android:src="@drawable/ic_baseline_cancel_24" />
+    </LinearLayout>
+
+//pada linearlayout ini yang sama memiliki sebuah fungsi didalamnya ada image view agar bisa saling terhubung dengan desain yang telah tertulis
+//dan terstuktur dengan masing masing memiliki sebuah antribut dan nilai warna, ukuran dan imagenyaa sendiri.
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:fontFamily="@font/manrope_bold"
+                android:background="@color/colorAccent"
+                android:text="@string/cancel"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="false"
+                android:textColor="@color/ColorWhite"
+                android:id="@+id/btnCancel"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:fontFamily="@font/manrope_bold"
+                android:background="@color/colorAccent"
+                android:text="@string/ok"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/ColorWhite"
+                android:id="@+id/btnOk"/>
+//pada fungsi ini merupakan sebuah fungsi membuat suatu tombol agar bisa terkoneksi kedalam halaman activty berikutnya dengan memberikan sebuah desan,
+//dengan gambar, warna dan ukuran teks tersebut yang nntinya memberikan akses untuk menyambungkan.
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWebLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:fontFamily="@font/manrope_bold"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/ColorGreenNote"
+        android:textColorHint="@color/ColorOrangeNote"
+        android:textSize="@dimen/_12ssp"
+        android:autoLink="web"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutWebUrl" />
+    //memberikan sebuah ukuran dan gambar
+
+    //pada kode program ini memiliki sebuah fungsi untuk menambahkan dan juga megedit suatu data
+    yang ada didalam desai tersebut dan juga memberikan desain baground
+    //dan ukurannya pada setiap fungsinya.
+
+    <EditText
+        android:id="@+id/etNoteDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginTop="376dp"
+        android:background="@null"
+        android:fontFamily="@font/manrope_regular"
+        android:hint="TAMBAHKAN MOTIVASI"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/ColorWhite"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWebLink"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="28.00dp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_bar" />
+    </FrameLayout>
+//pada kode program ini memberikan sebuah akses untuk menambahkan dan mengakses sebuah gambar
+
+</androidx.constraintlayout.widget.ConstraintLayout>
